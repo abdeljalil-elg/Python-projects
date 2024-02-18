@@ -1,9 +1,11 @@
+#calculer la dérivée
+#abdeljalilelgadi
 import sympy as sp
 
-def calculer_derivee(fonction):
+def my_derivee(fct):
     # Convertit la fonction en une expression sympy
     x = sp.symbols('x')
-    expression = sp.sympify(fonction)
+    expression = sp.sympify(fct)
     
     # Calcule la dérivée de la fonction par rapport à x
     derivee = sp.diff(expression, x)
@@ -11,11 +13,11 @@ def calculer_derivee(fonction):
     return derivee
 
 def main():
-    fonction = input("Entrez la fonction pour calculer sa dérivée : ")
+    fct = input("Entrez la fonction pour calculer sa dérivée : ")
     
     try:
-        derivee = calculer_derivee(fonction)
-        print("La dérivée de la fonction", fonction, "est :", derivee)
+        derivee = calculer_derivee(fct)
+        print("La dérivée de la fonction", fct, "est :", derivee)
     except Exception as e:
         print("Une erreur s'est produite lors du calcul de la dérivée :", e)
 
